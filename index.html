@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豆丹宝宝 | 连云港特色文创IP</title>
+    <meta name="description" content="豆丹宝宝是连云港特色文创IP，融合西游文化，推出毛绒玩具、文创雪糕、盲盒等系列产品。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'doudan': { green: '#4CAF50', 'green-dark': '#2E7D32', 'green-light': '#81C784' },
+                        'warm': { yellow: '#FFD54F', cream: '#FFFDE7', orange: '#FFB74D' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        html { scroll-behavior: smooth; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 213, 79, 0.4); }
+            50% { box-shadow: 0 0 20px 10px rgba(255, 213, 79, 0.2); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .hero-image-scale { transform: scale(1.8); }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-doudan-green rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">豆</span>
+                    </div>
+                    <span class="font-bold text-xl text-white nav-text">豆丹宝宝</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#hero" class="text-sm font-medium text-white/90 hover:text-doudan-green transition-colors">首页</a>
+                    <a href="#story" class="text-sm font-medium text-white/90 hover:text-doudan-green transition-colors">品牌故事</a>
+                    <a href="#emoji" class="text-sm font-medium text-white/90 hover:text-doudan-green transition-colors">表情包</a>
+                    <a href="#journey" class="text-sm font-medium text-white/90 hover:text-doudan-green transition-colors">西游系列</a>
+                    <a href="#products" class="text-sm font-medium text-white/90 hover:text-doudan-green transition-colors">产品展示</a>
+                    <a href="#contact" class="text-sm font-medium text-white/90 hover:text-doudan-green transition-colors">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen bg-gradient-to-br from-doudan-green via-doudan-green to-doudan-green-dark overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
+            <div class="absolute top-40 right-20 w-48 h-48 bg-warm-yellow/20 rounded-full blur-2xl" style="animation: float 4s ease-in-out infinite; animation-delay: 1s;"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 min-h-screen flex items-center">
+            <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+                <div class="text-center lg:text-left fade-in">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-4">
+                        <span class="text-white/90 text-sm font-medium tracking-wider">✨ 连云港特色文创IP</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">豆丹宝宝</h1>
+                    <p class="text-xl sm:text-2xl text-warm-yellow font-medium mb-2">DOUDAN BAOBAO</p>
+                    <p class="text-lg text-white/80 mb-8">小小豆丹，拿下</p>
+                    <p class="text-white/70 mb-8 max-w-md mx-auto lg:mx-0">连云港特色文创IP，让豆丹文化走进千家万户</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#products" class="px-8 py-3 bg-warm-yellow text-doudan-green-dark font-bold rounded-full animate-pulse-glow hover:bg-warm-cream transition-all text-center">探索产品</a>
+                        <a href="#story" class="px-8 py-3 bg-white/20 text-white font-bold rounded-full border-2 border-white/30 hover:bg-white/30 transition-all text-center">了解故事</a>
+                    </div>
+                </div>
+                <div class="relative fade-in flex items-center justify-center h-full" style="transition-delay: 0.2s;">
+                    <div class="relative w-full h-full flex items-center justify-center overflow-visible">
+                        <div class="relative animate-float w-full h-full flex items-center justify-center">
+                            <img src="images/首页主图.png" alt="豆丹宝宝" class="object-contain w-full h-full max-h-[80vh]" style="transform: scale(1.5);" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H0Z" fill="#FFFDE7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section id="story" class="py-20 bg-warm-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <div class="inline-block px-4 py-1 bg-doudan-green/10 rounded-full mb-4">
+                    <span class="text-doudan-green font-medium text-sm">Brand Story</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-doudan-green-dark mb-4">豆丹宝宝有话说</h2>
+                <div class="w-20 h-1 bg-warm-yellow mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative fade-in">
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                        <img src="images/首页第二张图.jpg" alt="豆丹宝宝设计说明" class="object-cover w-full h-full" />
+                    </div>
+                </div>
+                <div class="fade-in" style="transition-delay: 0.2s;">
+                    <div class="prose prose-lg text-gray-600 mb-8">
+                        <p class="mb-4">豆丹宝宝IP形象灵感来源于连云港的特色美食豆丹。豆丹作为当地特色食材，承载着连云港人民的饮食记忆与情感纽带。</p>
+                        <p>将豆丹这一元素拟人化为可爱的形象，旨在以创新、生动且富有亲和力的方式展现连云港的特色文化，让更多人了解并喜爱这座城市的独特魅力。</p>
+                    </div>
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                            <div class="w-10 h-10 bg-doudan-green rounded-lg flex items-center justify-center mb-3">🍜</div>
+                            <h3 class="font-bold text-gray-800 text-sm">连云港独有</h3>
+                            <p class="text-xs text-gray-500 mt-1">特色美食</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                            <div class="w-10 h-10 bg-warm-orange rounded-lg flex items-center justify-center mb-3">🏔️</div>
+                            <h3 class="font-bold text-gray-800 text-sm">西游文化</h3>
+                            <p class="text-xs text-gray-500 mt-1">发源地</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                            <div class="w-10 h-10 bg-doudan-green-light rounded-lg flex items-center justify-center mb-3">🛡️</div>
+                            <h3 class="font-bold text-gray-800 text-sm">IP版权</h3>
+                            <p class="text-xs text-gray-500 mt-1">已注册保护</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emoji Section -->
+    <section id="emoji" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <div class="inline-block px-4 py-1 bg-doudan-green/10 rounded-full mb-4">
+                    <span class="text-doudan-green font-medium text-sm">Emoji</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-doudan-green-dark mb-4">连云港专属豆丹表情包</h2>
+                <div class="w-20 h-1 bg-warm-yellow mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">一套结合连云港地方特色的表情包，以可爱的豆丹宝宝形象展示连云港方言的独特魅力</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <!-- 左侧大图 - 宽度增加，高度70% -->
+                <div class="relative rounded-2xl overflow-hidden shadow-lg fade-in" style="height: 70vh;">
+                    <img src="images/表情包1.png" alt="豆丹表情包设计图" class="object-contain w-full h-full bg-gray-50" />
+                </div>
+                <!-- 右侧小图 - 同宽度，高度70% -->
+                <div class="relative rounded-2xl overflow-hidden shadow-lg fade-in" style="height: 70vh; transition-delay: 0.2s;">
+                    <img src="images/表情包2.png" alt="豆丹表情包下载" class="object-contain w-full h-full bg-gray-50" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey to the West Section -->
+    <section id="journey" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <div class="inline-block px-4 py-1 bg-doudan-green/10 rounded-full mb-4">
+                    <span class="text-doudan-green font-medium text-sm">Journey to the West</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-doudan-green-dark mb-4">「这豆是西游」奇幻豆界大冒险</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">四位英雄化身豆丹，守护豆界和平，踏上寻找真经（美味豆丹秘籍）的旅程</p>
+            </div>
+
+            <!-- 第一行：西游合影 -->
+            <div class="mb-8 fade-in">
+                <div class="relative aspect-[16/9] max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+                    <img src="images/西游合影.jpg" alt="西游角色合影" class="object-cover w-full h-full" />
+                </div>
+            </div>
+
+            <!-- 第二行：文创雪糕 -->
+            <div class="fade-in" style="transition-delay: 0.2s;">
+                <div class="relative aspect-[16/9] max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+                    <img src="images/雪糕设计.jpg" alt="文创雪糕" class="object-cover w-full h-full" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <div class="inline-block px-4 py-1 bg-doudan-green/10 rounded-full mb-4">
+                    <span class="text-doudan-green font-medium text-sm">Products</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-doudan-green-dark mb-4">豆丹宝宝IP系列实物</h2>
+                <div class="w-20 h-1 bg-warm-yellow mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">从毛绒玩具到文创雪糕，从盲盒到生活用品，豆丹宝宝系列产品满足你的收藏需求</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all group fade-in">
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        <img src="images/毛绒玩具.png" alt="毛绒玩具" class="object-contain w-full h-full transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">毛绒玩具</h3>
+                        <p class="text-sm text-gray-600">可穿脱造型，萌趣可爱，帽衫可拆卸设计</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all group fade-in" style="transition-delay: 0.1s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/雪糕设计.jpg" alt="文创雪糕" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">文创雪糕</h3>
+                        <p class="text-sm text-gray-600">西游四款口味，清凉美味</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all group fade-in" style="transition-delay: 0.2s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/盲盒包装盒.jpg" alt="盲盒系列" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">盲盒系列</h3>
+                        <p class="text-sm text-gray-600">惊喜收藏，四色盲盒包装</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all group fade-in" style="transition-delay: 0.3s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/手机壳设计.jpg" alt="手机配件" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">手机配件</h3>
+                        <p class="text-sm text-gray-600">时尚手机壳，四款西游角色设计</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all group fade-in" style="transition-delay: 0.4s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/生活用品.png" alt="生活用品" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">生活用品</h3>
+                        <p class="text-sm text-gray-600">帆布袋、笔记本、胶带、笔等文创用品</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all group fade-in" style="transition-delay: 0.5s;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/礼盒.jpg" alt="礼盒包装" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">礼盒包装</h3>
+                        <p class="text-sm text-gray-600">精美礼盒，四色农产品礼盒</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Derivatives Section -->
+    <section class="py-20 bg-gradient-to-br from-doudan-green via-doudan-green-dark to-doudan-green relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-10 left-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-60 h-60 bg-warm-yellow/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <div class="inline-block px-4 py-1 bg-white/20 rounded-full mb-4">
+                    <span class="text-white font-medium text-sm">More Products</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">更多衍生品</h2>
+                <div class="w-20 h-1 bg-warm-yellow mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all fade-in">
+                    <div class="text-4xl mb-4">🏔️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">磁吸冰箱贴</h3>
+                    <p class="text-white/70">花果山、孔望山主题设计</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all fade-in" style="transition-delay: 0.1s;">
+                    <div class="text-4xl mb-4">🎖️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">徽章吧唧</h3>
+                    <p class="text-white/70">精美徽章，收藏必备</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all fade-in" style="transition-delay: 0.2s;">
+                    <div class="text-4xl mb-4">🔑</div>
+                    <h3 class="text-xl font-bold text-white mb-2">文创钥匙扣</h3>
+                    <p class="text-white/70">连云港方言表情包系列</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all fade-in" style="transition-delay: 0.3s;">
+                    <div class="text-4xl mb-4">🛍️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">帆布袋</h3>
+                    <p class="text-white/70">环保实用，时尚百搭</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all fade-in" style="transition-delay: 0.4s;">
+                    <div class="text-4xl mb-4">☕</div>
+                    <h3 class="text-xl font-bold text-white mb-2">马克杯</h3>
+                    <p class="text-white/70">豆丹宝宝陪伴你的每一天</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all fade-in" style="transition-delay: 0.5s;">
+                    <div class="text-4xl mb-4">😊</div>
+                    <h3 class="text-xl font-bold text-white mb-2">专属表情包</h3>
+                    <p class="text-white/70">连云港方言，趣味十足</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in">
+                <div class="flex flex-col items-center text-center p-4">
+                    <span class="text-3xl mb-2">📦</span>
+                    <h4 class="text-white font-medium">精美包装</h4>
+                    <p class="text-white/60 text-sm">送礼体面</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <span class="text-3xl mb-2">🚚</span>
+                    <h4 class="text-white font-medium">全国配送</h4>
+                    <p class="text-white/60 text-sm">快速到达</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <span class="text-3xl mb-2">✅</span>
+                    <h4 class="text-white font-medium">品质保证</h4>
+                    <p class="text-white/60 text-sm">正品授权</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <span class="text-3xl mb-2">🎨</span>
+                    <h4 class="text-white font-medium">专属定制</h4>
+                    <p class="text-white/60 text-sm">企业团购</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-warm-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-doudan-green-dark mb-4">让豆丹文化走向全国</h2>
+                    <p class="text-gray-700 mb-8 text-lg">期待与您合作，共同传播连云港特色文化。无论是商务合作、产品定制还是渠道代理，我们都竭诚为您服务。</p>
+                    <button class="px-8 py-4 bg-doudan-green text-white font-bold rounded-full hover:bg-doudan-green-dark shadow-lg animate-pulse-glow">联系我们</button>
+                </div>
+                <div class="space-y-4 fade-in" style="transition-delay: 0.2s;">
+                    <div class="bg-white rounded-xl p-6 shadow-md flex items-center gap-4">
+                        <div class="w-12 h-12 bg-doudan-green/10 rounded-full flex items-center justify-center">📧</div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">电子邮箱</h3>
+                            <p class="text-gray-600">591291210@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md flex items-center gap-4">
+                        <div class="w-12 h-12 bg-doudan-green/10 rounded-full flex items-center justify-center">📞</div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">联系电话</h3>
+                            <p class="text-gray-600">18642746271</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md flex items-center gap-4">
+                        <div class="w-12 h-12 bg-doudan-green/10 rounded-full flex items-center justify-center">📍</div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">公司地址</h3>
+                            <p class="text-gray-600">江苏省连云港市</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-doudan-green-dark text-white relative">
+        <div class="absolute top-0 left-0 right-0 transform rotate-180">
+            <svg viewBox="0 0 1440 60" fill="none"><path d="M0 60L60 55C120 50 240 40 360 35C480 30 600 30 720 32.5C840 35 960 40 1080 42.5C1200 45 1320 45 1380 45L1440 45V60H0Z" fill="#FFD54F"/></svg>
+        </div>
+        <div class="pt-20 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-3 gap-12 mb-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-doudan-green rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-xl">豆</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">豆丹宝宝</h3>
+                                <p class="text-white/60 text-sm">DOUDAN BAOBAO</p>
+                            </div>
+                        </div>
+                        <p class="text-white/70 text-sm">连云港特色文创IP，融合西游文化，传播地方特色文化。</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#hero" class="text-white/70 hover:text-warm-yellow transition-colors text-sm">首页</a></li>
+                            <li><a href="#story" class="text-white/70 hover:text-warm-yellow transition-colors text-sm">品牌故事</a></li>
+                            <li><a href="#emoji" class="text-white/70 hover:text-warm-yellow transition-colors text-sm">表情包</a></li>
+                            <li><a href="#journey" class="text-white/70 hover:text-warm-yellow transition-colors text-sm">西游系列</a></li>
+                            <li><a href="#products" class="text-white/70 hover:text-warm-yellow transition-colors text-sm">产品展示</a></li>
+                            <li><a href="#contact" class="text-white/70 hover:text-warm-yellow transition-colors text-sm">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">关注我们</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 text-white/70 text-sm"><span>💬</span><span>微信公众号：豆丹宝宝</span></div>
+                            <div class="flex items-center gap-2 text-white/70 text-sm"><span>📱</span><span>微博：豆丹宝宝</span></div>
+                            <div class="flex items-center gap-2 text-white/70 text-sm"><span>🎵</span><span>抖音：豆丹宝宝</span></div>
+                            <div class="flex items-center gap-2 text-white/70 text-sm"><span>📕</span><span>小红书：豆丹宝宝</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white/10 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p class="text-white/50 text-sm">© 2024 豆丹宝宝. All rights reserved. IP版权所有，侵权必究。</p>
+                        <p class="text-white/50 text-sm flex items-center gap-1">Made with ❤️ in 连云港</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const navText = document.querySelector('.nav-text');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+                navText.classList.remove('text-white');
+                navText.classList.add('text-doudan-green-dark');
+            } else {
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+                navText.classList.add('text-white');
+                navText.classList.remove('text-doudan-green-dark');
+            }
+        });
+
+        // Fade in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, margin: '-50px' });
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
