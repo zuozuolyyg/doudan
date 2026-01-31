@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doudan.love/sitemap.xml
