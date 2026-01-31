@@ -1,0 +1,33 @@
+# robots.txt for doudan.love
+# Generated: 2024-01-01
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://doudan.love/sitemap.xml
+
+# Disallow crawler access to admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Prevent crawling of duplicate content (anchors)
+Disallow: /#*
+
+# Specific crawler instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: *
+Allow: /
